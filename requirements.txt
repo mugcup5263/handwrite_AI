@@ -1,0 +1,4 @@
+kivy
+numpy
+pillow
+tflite-runtime
