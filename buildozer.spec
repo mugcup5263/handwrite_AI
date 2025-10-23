@@ -52,6 +52,12 @@ android.archs = arm64-v8a, armeabi-v7a
 # (bool) enables Android auto backup feature (AndroidAPI >=23)
 android.allow_backup = True
 
+# (bool) automatically accept the SDK license agreement
+android.accept_sdk_license = True
+
+# (bool) force buildozer to re-download the android platform and build tools
+android.skip_update = False
+
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
