@@ -37,6 +37,7 @@ jobs:
           autoconf \
           automake \
           libtool \
+          autoconf-archive \
           libsdl2-dev \
           libsdl2-image-dev \
           libsdl2-mixer-dev \
@@ -76,9 +77,12 @@ jobs:
         pip install cython buildozer
         pip install kivy numpy pillow matplotlib tensorflow
     
-    - name: Run libtoolize
+    - name: Prepare Autotools Environment
       run: |
         libtoolize --force --copy
+        aclocal
+        autoconf
+        automake --add-missing --copy
     
     - name: Build APK
       run: |
