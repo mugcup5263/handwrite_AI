@@ -131,7 +131,7 @@ class HandwritingApp(App):
         except Exception as e:
             _set_msg(f'모델 로딩 실패: {e}')
 
-    def clear_canvas(self, instance):
+    def clear_canvas(self, instance):   
         self.drawing_widget.clear_canvas()
         self.result_label.text = ""
 
