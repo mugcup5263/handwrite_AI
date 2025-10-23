@@ -76,6 +76,10 @@ jobs:
         pip install cython buildozer
         pip install kivy numpy pillow matplotlib tensorflow
     
+    - name: Run libtoolize
+      run: |
+        libtoolize --force --copy
+    
     - name: Build APK
       run: |
         buildozer android debug
